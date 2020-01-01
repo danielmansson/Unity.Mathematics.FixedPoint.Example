@@ -17,8 +17,8 @@ public class ApplyForceSystem : JobComponentSystem
 
 		public void Execute(
 			ref LinearForce force,
-			ref Position position,
-			ref Mass mass)
+			[ReadOnly] ref Position position,
+			[ReadOnly] ref Mass mass)
 		{
 			force.Value += 1000 * math.normalize((target - position.Value)) * timeStep / mass.Value;
 		}
