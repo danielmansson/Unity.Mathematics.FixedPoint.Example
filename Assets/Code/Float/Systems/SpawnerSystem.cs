@@ -9,7 +9,6 @@ public class SpawnerSystem : JobComponentSystem
 {
 	BeginInitializationEntityCommandBufferSystem entityCommandBufferSystem;
 
-	[BurstCompile]
 	struct SpawnerSystemJob : IJobForEachWithEntity<Spawner>
 	{
 		public EntityCommandBuffer.Concurrent commandBuffer;

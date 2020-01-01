@@ -7,14 +7,13 @@ using Unity.Mathematics.FixedPoint;
 [UpdateBefore(typeof(ApplyForceSystem))]
 public class FpDampingSystem : JobComponentSystem
 {
-	public static readonly fp C1 = 40m;
-	public static readonly fp C2 = 0.4m;
-	public static readonly fp C3 = 0.1m;
-
 	[BurstCompile]
 	struct FpDampingSystemJob : IJobForEach<FpLinearVelocity, FpLinearForce>
 	{
 		public fp timeStep;
+		public fp C1;
+		public fp C2;
+		public fp C3;
 		//TODO: Figure out how to deal with magic constants in dots
 
 		public void Execute(
@@ -34,6 +33,9 @@ public class FpDampingSystem : JobComponentSystem
 		var job = new FpDampingSystemJob();
 
 		job.timeStep = (fp)UnityEngine.Time.fixedDeltaTime;
+		job.C1 = 40m;
+		job.C2 = 0.4m;
+		job.C3 = 0.1m;
 
 		return job.Schedule(this, inputDependencies);
 	}

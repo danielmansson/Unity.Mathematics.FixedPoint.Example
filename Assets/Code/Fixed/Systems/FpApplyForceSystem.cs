@@ -10,14 +10,6 @@ public class FpApplyForceSystem : JobComponentSystem
 {
 	public static fp3 Target { get; set; }
 
-	//TODO: Consider remove decimal as an implicit cast to fp. 
-	fp C1;
-
-	protected override void OnCreate()
-	{
-		C1 = 1000;
-	}
-
 	[BurstCompile]
 	struct FpApplyForceSystemJob : IJobForEach<FpLinearForce, FpPosition, FpMass>
 	{
@@ -40,7 +32,7 @@ public class FpApplyForceSystem : JobComponentSystem
 
 		job.timeStep = (fp)UnityEngine.Time.fixedDeltaTime;
 		job.target = Target;
-		job.C1 = C1;
+		job.C1 = 1000;
 
 		return job.Schedule(this, inputDependencies);
 	}

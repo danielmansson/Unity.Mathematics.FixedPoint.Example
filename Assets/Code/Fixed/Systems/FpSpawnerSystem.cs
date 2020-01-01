@@ -10,7 +10,6 @@ public class FpSpawnerSystem : JobComponentSystem
 {
 	BeginInitializationEntityCommandBufferSystem entityCommandBufferSystem;
 
-	[BurstCompile]
 	struct FpSpawnerSystemJob : IJobForEachWithEntity<FpSpawner>
 	{
 		public EntityCommandBuffer.Concurrent commandBuffer;
