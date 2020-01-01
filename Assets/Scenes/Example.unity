@@ -366,7 +366,7 @@ GameObject:
   - component: {fileID: 2053145336}
   - component: {fileID: 2053145340}
   m_Layer: 0
-  m_Name: InputPlane
+  m_Name: SimulationInput
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
