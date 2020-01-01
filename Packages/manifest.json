@@ -1,6 +1,6 @@
 {
   "dependencies": {
-    "com.danielmansson.mathematics.fixedpoint": "file:../../Unity.Mathematics.FixedPoint",
+    "com.danielmansson.mathematics.fixedpoint": "https://github.com/danielmansson/Unity.Mathematics.FixedPoint.git",
     "com.unity.collab-proxy": "1.2.16",
     "com.unity.entities": "0.1.1-preview",
     "com.unity.ext.nunit": "1.0.0",
@@ -43,5 +43,11 @@
     "com.unity.modules.vr": "1.0.0",
     "com.unity.modules.wind": "1.0.0",
     "com.unity.modules.xr": "1.0.0"
+  },
+  "lock": {
+    "com.danielmansson.mathematics.fixedpoint": {
+      "hash": "293d721bf896a0fd18020abd3d5b7807ff5af859",
+      "revision": "HEAD"
+    }
   }
 }
